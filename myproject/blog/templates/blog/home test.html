@@ -1,0 +1,26 @@
+
+<center>
+	
+	{% for article in articles %}
+		<article>
+			<img src="{{article.thumbnail.url}}" alt="{{article.title}}" width="600" height="450">
+			<h1><a href="{% url 'blog:detail' article.slug %}">{{article.title}}</a></h1>
+			<small> {{article.jpublish}}</small>
+			<p>{{article.description}}</p>
+		</article>
+	{% endfor %}
+
+</center>
+
+
+<!--
+{% block content %}
+
+ <form  method="POST"> { % csrf_token %}
+<form>
+	{{ form.as_p }}
+	<input type="submit" name="Save">
+
+</form>
+
+	<input type="text" name="title" placeholder="your title"/>-->

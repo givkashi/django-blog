@@ -1,0 +1,17 @@
+  <body>
+      <div class="collapse navbar-collapse navbar-nav " id="navbarResponsive">
+        <ul  id="nav">
+           {% for cat in category %}
+           	 {% if cat.parent == None %}
+	           	 <li >
+		              <a  href="{% url 'blog:category' cat.slug %}">{{cat.title}}</a>
+		              {% if cat.childeren.active %}
+		              	{% include 'blog/partials/category_loop.html' %}
+		          	  {% endif %}
+	            </li>
+           	 {% endif %}
+           {% endfor %}
+        </ul>
+      </div>
+      
+  </body>

@@ -1,0 +1,10 @@
+  	<ul  id="nav">
+	    {% for cat in cat.childeren.active %}
+	      <li >
+	          <a class="nav-link" href="{% url 'blog:category' cat.slug %}">{{cat.title}}</a>
+	            {% if cat.childeren.active %}
+	              	{% include 'blog/partials/category_loop.html' %}
+	          	  {% endif %}
+	        </li>
+	    {% endfor %}
+	</ul>

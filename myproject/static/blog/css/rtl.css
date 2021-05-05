@@ -1,0 +1,109 @@
+@font-face {
+  font-family: Sahel;
+  src: url('Sahel.eot');
+  src: url('Sahel.eot?#iefix') format('embedded-opentype'),
+       url('Sahel.woff2') format('woff2'),
+       url('Sahel.woff') format('woff'),
+       url('Sahel.ttf') format('truetype');
+
+}
+
+
+body{
+	direction: rtl;
+	text-align: right;
+	font-family: "Sahel";
+	font-size: 14px;
+}
+.navbar-nav {
+	margin-left: initial !important;
+	margin-right: auto;
+	direction: ltr;
+}
+.post-meta {
+	text-align: left;
+}
+
+.pager-botton {
+	float: left !important;
+}
+
+header.masthead .site-heading h1 {
+	font-size: 40px;
+}
+
+.post-title {
+	font-size: 28px !important;
+}
+
+.post-subtitle{
+	font-size: 16px;
+}
+
+		#nav {
+            list-style: none inside;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #nav li {
+            display: block;
+            position: relative;
+            float: left;
+            background: #24af15;
+            /* menu background color */
+        }
+
+        #nav li a {
+            display: block;
+            padding: 0;
+            text-decoration: none;
+            width: 200px;
+            /* this is the width of the menu items */
+            line-height: 35px;
+            /* this is the hieght of the menu items */
+            color: #ffffff;
+            /* list item font color */
+        }
+
+        #nav li li a {
+            font-size: 80%;
+        }
+
+        /* smaller font size for sub menu items */
+
+        #nav li:hover {
+            background: #003f20;
+        }
+
+        /* highlights current hovered list item and the parent list items when hovering over sub menues */
+
+        #nav ul {
+            position: absolute;
+            padding: 0;
+            left: 0;
+            display: none;
+            /* hides sublists */
+        }
+
+        #nav li:hover ul ul {
+            display: none;
+        }
+
+        /* hides sub-sublists */
+
+        #nav li:hover ul {
+            display: block;
+        }
+
+        /* shows sublist on hover */
+
+        #nav li li:hover ul {
+            display: block;
+            /* shows sub-sublist on hover */
+            margin-left: 200px;
+            /* this should be the same width as the parent list item */
+            margin-top: -35px;
+            /* aligns top of sub menu with top of list item */
+        }

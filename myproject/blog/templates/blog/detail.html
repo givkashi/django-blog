@@ -1,0 +1,38 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+
+{% block custom-header %}
+<link rel="stylesheet" type="text/css" href="red.css">
+{% endblock %}
+
+{% block title %} | {{article.title }}{% endblock %}
+
+{% block main %} 
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{article.thumbnail.url}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>{{article.title}}</h1>
+            <time>{{article.jpublish}}</time>
+            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto text-justify">
+        {{article.description|linebreaks}}
+        </div>
+      </div>
+    </div>
+  </article>
+
+{% endblock %}
